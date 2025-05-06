@@ -1,0 +1,36 @@
+CREATE DATABASE esmaltes_catalogo;
+
+USE esmaltes_catalogo;
+
+-- Tabela de esmaltes
+CREATE TABLE esmaltes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cor VARCHAR(50),
+    acabamento VARCHAR(50),
+    imagem_url VARCHAR(255),
+    usos INT DEFAULT 0,
+    ultimo_usado DATE
+);
+
+-- Tabela de paletas (opcional para gerar paletas personalizadas)
+CREATE TABLE paletas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome_paleta VARCHAR(100),
+    esmaltes TEXT
+);
+
+SHOW TABLES;
+
+
+
+
+
+
+-- inserir tabela paletas
+CREATE TABLE paletas (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome_paleta VARCHAR(100),
+  esmaltes TEXT
+);
+

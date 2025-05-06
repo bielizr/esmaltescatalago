@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Esmaltes</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Arquivo CSS para estilização -->
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Esmaltes</h1>
+  </header>
+
+  <!-- Barra de Pesquisa -->
+  <section id="search-section">
+    <input type="text" id="search" placeholder="Buscar por cor..." />
+    <button onclick="searchEsmaltes()">Buscar</button>
+  </section>
+
+  <!-- Lista de Esmaltes -->
+  <section id="esmaltes-list">
+    <h2>Esmaltes Disponíveis</h2>
+    <div id="esmaltes-container"></div>
+  </section>
+
+  <!-- Seção para exibir as paletas geradas -->
+  <section id="paleta-section">
+    <h2>Paleta de Esmaltes</h2>
+    <div id="paleta-container"></div>
+    <button onclick="gerarPaleta()">Gerar Paleta</button>
+  </section>
+
+  <!-- Filtro de Classificação -->
+<section id="filter-section">
+    <label for="filter">Classificar por:</label>
+    <select id="filter">
+      <option value="cor">Cor</option>
+      <option value="acabamento">Acabamento</option>
+      <option value="mais_usados">Mais Usados</option>
+      <option value="ultimo_usado">Último Usado</option>
+    </select>
+    <button onclick="searchEsmaltes()">Aplicar Filtro</button>
+  </section>
+  
+
+  <footer>
+    <p>&copy; 2025 Catálogo de Esmaltes</p>
+  </footer>
+
+  <script src="app.js"></script> <!-- Arquivo JS para lógica -->
+</body>
+</html>
